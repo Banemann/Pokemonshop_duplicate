@@ -22,7 +22,7 @@ const ShopSingle = () => {
     const fetchProduct = async () => {
       try {
         const { data, error } = await supabase
-          .from('pokemonshop')
+          .from('pokemonshop_duplicate')
           .select('*')
           .eq('id', productId)
           .single();

@@ -26,8 +26,8 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const [productsResult, spotResult] = await Promise.all([
-          supabase.from("pokemonshop").select("*"),
-          supabase.from("pokemonshop").select("*").eq("type", "spot").single(),
+          supabase.from("pokemonshop_duplicate").select("*"),
+          supabase.from("pokemonshop_duplicate").select("*").eq("type", "spot").single(),
         ]);
   
         if (productsResult.error) throw productsResult.error;
