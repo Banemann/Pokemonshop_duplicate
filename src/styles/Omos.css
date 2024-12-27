@@ -1,0 +1,122 @@
+.omos-page {
+    margin: 0 auto;
+    margin-top: 145px;
+  }
+
+.omherosection img{
+ width: 100%;
+ height: 45vh;
+  object-fit: cover;
+  object-position: top;
+}
+
+.omherosection h1{
+  max-width: 1200px;
+  text-align: left;
+  margin: 44px auto;
+  font-size: 44px;
+  color: #1f2d5c;
+}
+
+.omvision{
+  display: flex;
+  flex: 1;
+  height: 735px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  padding-top: 120px;
+  gap: 50px;
+}
+
+.omvisiontext{
+  max-width: 561px;
+  line-height: 1.5;
+  font-size: 18px;
+  color: #1F2E5C;
+}
+
+.omvisiontext h2{
+  font-size: 35px;
+  padding-bottom: 10px;
+}
+
+.shophours{
+  padding-top: 20px;
+}
+
+.omvision iframe{
+  object-fit: cover;
+  margin: 50px;
+}
+
+.omvision .iframe2{
+  object-fit: cover;
+  margin: 50px;
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .omherosection {
+    display: none; 
+  }
+
+  .omvision {
+    flex-direction: column; 
+    align-items: center;
+    height: auto; 
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .omvisiontext {
+    max-width: 85%; 
+    text-align: left;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+  .opentiderdiv{
+    background-color: #1f2d5c;
+    color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    line-height: 2;
+    text-align: center;
+  }
+
+  .opentider {
+    font-size: 28px; 
+  }
+
+  .omvision .iframe2 { 
+    width: 80%;
+    margin: 0; 
+    display: block;
+    margin-top: 90px;
+  }
+
+  .omvision iframe {
+    display: none;
+  } 
+
+}
+
+@media (max-width: 768px) {
+
+  .omherosection h1 {
+    font-size: 35px; 
+    margin: 20px auto;
+  }
+
+  .omvisiontext {
+    line-height: 1.4; 
+    padding: 0 15px;
+  }
+
+  .omvisiontext h2 {
+    font-size: 26px; 
+  }
+}
+
+  

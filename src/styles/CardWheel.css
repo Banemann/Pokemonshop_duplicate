@@ -1,0 +1,157 @@
+.card-wheel {
+  display: flex;
+  overflow: hidden;
+  gap: 4px;
+  max-width: 100%;
+  box-sizing: border-box;
+  width: 1270px;
+  margin: 0 auto;
+}
+
+.card-wheel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.card-wheel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.card-wheel .product-card {
+  min-width: 295px;
+  flex: 0 0 auto;
+}
+
+.arrow {
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-80%);
+  z-index: 1;
+}
+
+.left-arrow {
+  left: -40px;
+}
+
+.right-arrow {
+  right: -40px;
+}
+
+.arrow:disabled {
+  cursor: not-allowed;
+}
+
+.scrollbar-container {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.scrollbar {
+  width: 100%;
+  height: 5px;
+  background-color: #d0d0d0;
+  border-radius: 5px;
+  position: relative;
+}
+
+.scrollbar-thumb {
+  height: 100%;
+  background-color: #1F2D5C;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  transition: left 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .card-wheel-container {
+    max-width: 100%;
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-wheel .product-card {
+    min-width: 240px; 
+  }
+
+  .card-wheel {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+    width: 100%;
+    gap: 8px;
+  }
+
+  .card-wheel .product-card {
+    min-width: 200px; 
+  }
+
+ 
+}
+
+@media (max-width: 768px) {
+  .card-wheel-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-wheel .product-card {
+    min-width: 200px; 
+  } 
+}
+
+@media (max-width: 480px) {
+  .card-wheel-container {
+    padding: 0 10px;
+  }
+
+  .card-wheel .product-card {
+    min-width: 180px;
+  }
+
+}
+
+@media (max-width: 1400px) {
+
+
+  .card-wheel {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+  }
+
+  .scrollbar-thumb {
+    display: none;
+  }
+
+  .scrollbar-container {
+    display: none;
+  }
+
+  .left-arrow {
+    left: -30px;
+  }
+  
+  .right-arrow {
+    right: -30px;
+  }
+
+  
+}

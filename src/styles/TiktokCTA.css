@@ -1,0 +1,181 @@
+.ctadiv{
+    display: flex;
+    justify-content: center;
+    margin: 115px 0;
+  }
+  
+  .cta {
+    height: 416px;
+    width: 100%;
+    display: flex;
+    background: white; 
+    box-shadow: 10px 4px 25px rgba(0, 0, 0, 0.25);
+    margin-top: 40px;
+    justify-content: center;
+    gap: 90px;
+  }
+  
+  .ctatext{
+    color: #1f2d5c;
+    max-width: 626px;
+    line-height: 1.5;
+    font-size: 18px;
+    margin-top: 50px;
+    padding: 10px;
+  }
+  
+  .ctatext h2 {
+    font-size: 28px;
+  }
+  
+  .cta img{
+    height: 118%;
+    position: relative;
+    bottom: 75px;
+  }
+  
+  .tiktokbtn{
+  width: 194px;
+  height: 69px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  background-color: #e73a2d;
+  border: none;
+  font-size: 23px;
+  color: #fff;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 20px;
+  text-decoration: none;
+  }
+
+  .tiktokbtn:hover{
+    transform: scale(1.09);
+  }
+
+  .tiktokbtn:active{
+    background-color: #1f2d5c;
+  }
+  
+  .tiktokbtn img{
+    width: 27px;
+    height: 27px;
+    margin-top: 150px;
+  }
+
+  .maskot2{
+    display: none;
+  }
+
+  @media (max-width: 1024px) {  
+    .cta {
+      flex-direction: column; 
+      height: auto; 
+      gap: 40px; 
+      flex-direction: column; 
+      align-items: center; 
+      padding: 15px;
+    }
+
+    .ctadiv{
+      margin: 5px auto;
+    }
+  
+    .cta img {
+      height: auto; 
+      max-width: 30%; 
+      position: static; 
+      bottom: 0;
+    }
+  
+    .ctatext {
+      text-align: center; 
+      margin-top: 10px;
+      padding: 0 10px;
+    }
+  
+    .ctatext h2 {
+      font-size: 24px; 
+    }
+  
+    .tiktokbtn {
+      width: 170px;
+      height: 59px;
+      font-size: 18px;
+    }
+
+    .tiktokbtn img{
+      margin-top: 0px;
+    }
+
+    .maskot2{
+      display: block;
+    }
+
+    .maskot1{
+      display: none;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .cta {
+      flex-direction: column; 
+      align-items: center; 
+      padding: 15px;
+    }
+  
+    .ctatext {
+      text-align: center; 
+      font-size: 16px; 
+      line-height: 1.4;
+    }
+  
+    .ctatext h2 {
+      font-size: 22px; 
+    }
+  
+    .tiktokbtn {
+      align-self: center; 
+      width: 170px;
+      height: 59px;
+      font-size: 18px;
+    }
+  
+    .cta img {
+      align-self: center; 
+      max-width: 50%; 
+    }
+  }
+  
+  @media (max-width: 480px) {  
+    .cta {
+      gap: 15px;
+      padding: 10px;
+    }
+  
+    .ctatext {
+      font-size: 14px; 
+      line-height: 1.3;
+      max-width: 100%; 
+      text-align: center; 
+    }
+  
+    .ctatext h2 {
+      font-size: 18px; 
+    }
+  
+    .tiktokbtn {
+      width: 150px;
+      height: 50px;
+      font-size: 16px;
+    }
+  
+    .cta img {
+      align-self: center; 
+      max-width: 40%;
+    }
+  }
+  
