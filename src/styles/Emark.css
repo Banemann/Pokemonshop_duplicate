@@ -1,0 +1,22 @@
+body {
+    overflow-x: hidden;
+}
+
+.emark {
+    position: absolute;
+    right: -260px;
+    top: 450px;
+    clip-path: inset(0 260px 0 0);
+    transition: right 0.3s ease-in-out, clip-path 0.3s ease-in-out;
+}
+
+.emark:hover {
+    right: -5px;
+    clip-path: inset(0 0 0 0);
+}
+
+.emark img {
+    width: 400px;
+    height: auto;
+    object-fit: cover;
+}

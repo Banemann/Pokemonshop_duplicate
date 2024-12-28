@@ -5,6 +5,7 @@ import CardWheel from "../components/CardWheel";
 import { useCart } from "../context/CartContext";
 import { Link } from 'react-router-dom';  
 import TiktokCTA from "../components/TiktokCTA";
+import Emark from "../components/Emark";
 
 const Home = () => {
   const [products, setProducts] = useState([]);
@@ -51,6 +52,7 @@ const Home = () => {
 
   return (
     <div className="homediv">
+      <Emark/>
       <div className="homenyheder">
         <div className="nyhedertext">
           <h1>Populære Nyheder</h1>
@@ -61,8 +63,12 @@ const Home = () => {
           </p>
         </div>
         <div className="nyhederimagediv">
+          <Link to="/shop?collection=Prismatic%20Evolutions">
         <img src="info1.webp" alt="nyhed1" width="567" height="633.64" />
+        </Link>
+        <Link to="/shop">
         <img src="info2.webp" alt="nyhed2" width="567" height="633.64" />
+</Link>
         </div>
       </div>
 

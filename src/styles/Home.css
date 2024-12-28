@@ -32,6 +32,10 @@
   max-width: 567px;
 }
 
+.nyhederimagediv img:hover{
+  transform: scale(.99);
+}
+
 .homeanbefalet {
   box-shadow: 10px 4px 25px rgba(0, 0, 0, 0.25);
   background-color: #fff;
@@ -101,7 +105,7 @@
 }
 
 .spotproductprice {
-  font-size: 18px;
+  font-size: 22px !important;
   font-weight: bold;
   padding: 5px 0;
 }
