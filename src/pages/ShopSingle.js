@@ -43,12 +43,15 @@ const ShopSingle = () => {
   if (loading) return <p className="loading">Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
+  const indholdItems = product.indhold.split(',').map((item, index) => (
+    <li key={index}>{item.trim()}</li>
+  ));
+
   return (
     <div className="product-detail-single">
-      
       <div className="product-grid-single">
         <div className="image-wrapper-single">
-        <img src={product.image_url} alt={product.cardname}/>
+          <img src={product.image_url} alt={product.cardname} />
         </div>
         <div className="product-info-single">
           <p className='singlegrade'>{product.grade}</p>
@@ -56,7 +59,6 @@ const ShopSingle = () => {
           <h1 className='singleh1'>{product.cardname}</h1>
           <p>{product.kortbeskrivelse}</p>
           <p className='singleprice'>{`${product.price.toFixed(0)} kr.`}</p>
-         
           <button
             className="add-to-bag-btn-single"
             onClick={handleAddToCart}
@@ -66,8 +68,6 @@ const ShopSingle = () => {
           </button>
         </div>
       </div>
-
-      
       <div className="details-grid-single">
         <div className="product-description-single">
           <h2>Beskrivelse</h2>
@@ -75,7 +75,7 @@ const ShopSingle = () => {
         </div>
         <div className="product-contents-single">
           <h2>Indholder</h2>
-          <p>{product.indhold}</p>
+          <ul>{indholdItems}</ul>
         </div>
       </div>
     </div>
