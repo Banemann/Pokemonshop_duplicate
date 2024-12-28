@@ -153,45 +153,119 @@ const Header = () => {
         </div>
 
         <nav className={isBurgerOpen ? "nav open" : "nav"}>
-        
-          <div
-            className="dropdown"
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-          >
-            <form className="search-bar-mobile" onSubmit={handleSearchSubmit}>
-            <button type="submit" className="search-button">
-              <img src="/searchicon.png" alt="Search" height="19" width="19" />
-            </button>
-            <input
-              type="text"
-              placeholder="Søg efter Pokémon kort.."
-              value={searchQuery}
-              onChange={handleSearchChange}
-            />
-          </form>
-            <Link className="seriera" to="/shop">Pokémon serier</Link>
-            <div className={`dropdown-content ${isDropdownOpen ? "show" : ""}`}>
-              <h1>Pokemon TCG serier</h1>
-              <div className="ddserier">
-                <Link to={{ pathname: "/shop", search: "?collection=Prismatic Evolutions" }} state={{ collectionName: "Pokémon Prismatic Evolutions" }} onClick={handleLinkClick}>
-                  <img src="/prismatic-serie.svg" alt="Prismatic Evolutions" width="267" height="142" />
-                </Link>
-                <Link to={{ pathname: "/shop", search: "?collection=Surging Sparks" }} state={{ collectionName: "Pokémon Surging Sparks" }} onClick={handleLinkClick}>
-                  <img src="/surging-serie.svg" alt="Surging Sparks" width="267" height="142" />
-                </Link>
-                <Link to={{ pathname: "/shop", search: "?collection=Stellar Crown" }} state={{ collectionName: "Pokémon Stellar Crown" }} onClick={handleLinkClick}>
-                  <img src="/stellar-serie.svg" alt="Stellar Crown" width="267" height="142" />
-                </Link>
-              </div>
-            </div>
-          </div>
-          <Link to="/shop?type=Gradede kort" onClick={handleLinkClick}>Gradede kort</Link>
-          <Link to="/shop?type=Tilbehør" onClick={handleLinkClick}>Tilbehør</Link>
-          <Link to="/shop?type=Figurer og bamser" onClick={handleLinkClick}>Figurer & bamser</Link>
-          <Link to="/Omos" onClick={handleLinkClick}>Om os</Link>
-          <Link to="/Nyheder" onClick={handleLinkClick}>Nyheder</Link>
-        </nav>
+  <div
+    className="dropdown"
+    onMouseEnter={handleMouseEnter}
+    onMouseLeave={handleMouseLeave}
+  >
+    <Link
+      to="/shop"
+      className={
+        location.pathname === "/shop" && !location.search ? "active" : ""
+      }
+    >
+      Pokémon serier
+    </Link>
+    <div className={`dropdown-content ${isDropdownOpen ? "show" : ""}`}>
+      <h1>Pokémon TCG serier</h1>
+      <div className="ddserier">
+        <Link
+          to={{
+            pathname: "/shop",
+            search: "?collection=Prismatic Evolutions",
+          }}
+          state={{ collectionName: "Pokémon Prismatic Evolutions" }}
+          onClick={handleLinkClick}
+        >
+          <img
+            src="/prismatic-serie.svg"
+            alt="Prismatic Evolutions"
+            width="267"
+            height="142"
+          />
+        </Link>
+        <Link
+          to={{
+            pathname: "/shop",
+            search: "?collection=Surging Sparks",
+          }}
+          state={{ collectionName: "Pokémon Surging Sparks" }}
+          onClick={handleLinkClick}
+        >
+          <img
+            src="/surging-serie.svg"
+            alt="Surging Sparks"
+            width="267"
+            height="142"
+          />
+        </Link>
+        <Link
+          to={{
+            pathname: "/shop",
+            search: "?collection=Stellar Crown",
+          }}
+          state={{ collectionName: "Pokémon Stellar Crown" }}
+          onClick={handleLinkClick}
+        >
+          <img
+            src="/stellar-serie.svg"
+            alt="Stellar Crown"
+            width="267"
+            height="142"
+          />
+        </Link>
+      </div>
+    </div>
+  </div>
+  <Link
+    to="/shop?type=Gradede kort"
+    onClick={handleLinkClick}
+    className={
+      new URLSearchParams(location.search).get("type") === "Gradede kort"
+        ? "active"
+        : ""
+    }
+  >
+    Gradede kort
+  </Link>
+  <Link
+    to="/shop?type=Tilbehør"
+    onClick={handleLinkClick}
+    className={
+      new URLSearchParams(location.search).get("type") === "Tilbehør"
+        ? "active"
+        : ""
+    }
+  >
+    Tilbehør
+  </Link>
+  <Link
+    to="/shop?type=Figurer og bamser"
+    onClick={handleLinkClick}
+    className={
+      new URLSearchParams(location.search).get("type") === "Figurer og bamser"
+        ? "active"
+        : ""
+    }
+  >
+    Figurer & bamser
+  </Link>
+  <Link
+    to="/Omos"
+    onClick={handleLinkClick}
+    className={location.pathname === "/Omos" ? "active" : ""}
+  >
+    Om os
+  </Link>
+  <Link
+    to="/Nyheder"
+    onClick={handleLinkClick}
+    className={location.pathname === "/Nyheder" ? "active" : ""}
+  >
+    Nyheder
+  </Link>
+</nav>
+
         <CartSidebar isOpen={isSidebarOpen} onClose={toggleSidebar} />
       </header>
       {isHomePage && (
