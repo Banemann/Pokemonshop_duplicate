@@ -46,6 +46,7 @@ const Header = () => {
   const handleLinkClick = () => {
     setIsDropdownOpen(false);
     setIsBurgerOpen(false);
+    window.scrollTo(0, 0);
   };
 
   useEffect(() => {

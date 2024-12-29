@@ -9,7 +9,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import CartSidebar from './components/CartSidebar';
 import { CartProvider } from './context/CartContext';
-import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -21,7 +20,6 @@ function App() {
   return (
     <CartProvider>
       <Router>
-      <ScrollToTop />
         <div className="App">
           <Header />
           <main>
