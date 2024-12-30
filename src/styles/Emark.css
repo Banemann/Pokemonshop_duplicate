@@ -20,3 +20,12 @@ body {
     height: auto;
     object-fit: cover;
 }
+
+
+@media screen and (max-width: 1280px) {
+    .emark {
+        display: none;
+    }
+    
+}
+
