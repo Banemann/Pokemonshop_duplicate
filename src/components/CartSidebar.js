@@ -71,7 +71,7 @@ const CartSidebar = ({ isOpen, onClose }) => {
     </div>
     <div className="cart-total">
       <p className="checkout-note">Inkl. moms. fragten udregnes ved checkout</p>
-      <button className="checkout-btn" onClick={onClose}>Til checkout</button> 
+      <button className="checkout-btn" onClick={onClose}>Til checkout - {total.toFixed(2)} kr.</button> 
     </div>
   </>
 ) : (
