@@ -43,12 +43,6 @@ const CartSidebar = ({ isOpen, onClose }) => {
       <ul className="cart-items">
         {cart.map((product) => (
           <li key={product.id} className="cart-item-card">
-            <button 
-        className="remove-button" 
-        onClick={() => removeFromCart(product.id)}
-      >
-        ✕
-      </button>
             <div className='cartimgdiv'>
             <img src={product.image} alt={product.cardname} className="cart-item-image" />
             </div>
@@ -59,6 +53,12 @@ const CartSidebar = ({ isOpen, onClose }) => {
                 <button onClick={() => handleDecrease(product.id)}>-</button>
                 <span>{product.quantity}</span>
                 <button onClick={() => handleIncrease(product.id)}>+</button>
+                <button 
+        className="remove-button" 
+        onClick={() => removeFromCart(product.id)}
+      >
+        <img src="trash.svg" alt="Delete" height="20" width="20"/>
+      </button>
               </div>
             </div>
           </li>
