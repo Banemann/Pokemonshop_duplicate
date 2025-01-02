@@ -13,7 +13,7 @@ const Nyheder = () => {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const { data, error } = await supabase.from("pokemonshop").select("*");
+        const { data, error } = await supabase.from("pokemonshop_duplicate").select("*");
 
         if (error) throw error;
 

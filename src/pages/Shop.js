@@ -20,7 +20,7 @@ const Shop = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const { data, error } = await supabase.from("pokemonshop").select("*");
+        const { data, error } = await supabase.from("pokemonshop_duplicate").select("*");
 
         if (error) {
           throw error;
@@ -119,12 +119,12 @@ const Shop = () => {
         <h3>Type</h3>
         <div className="type-filters">
           {[
-            "Single kort",
-            "Booster pakker",
-            "Booster bokse",
-            "Blister pakker",
+            "Single cards",
+            "Booster packs",
+            "Booster boxes",
+            "Blister packs",
             "Build & battle",
-            "ETB",
+            "ETBs",
             "Tins",
           ].map((type) => (
             <div key={type}>

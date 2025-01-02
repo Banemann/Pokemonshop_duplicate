@@ -40,8 +40,8 @@ const ProductCard = ({ product }) => {
       <Link to={`/shop/${product.id}`} className="product-card-link">
         <div
           className="cardimgdiv"
-          onMouseMove={product.type === 'Single kort' ? handleMouseMove : undefined}
-          onMouseLeave={product.type === 'Single kort' ? handleMouseLeave : undefined}
+          onMouseMove={product.type === 'Single cards' ? handleMouseMove : undefined}
+          onMouseLeave={product.type === 'Single cards' ? handleMouseLeave : undefined}
         >
           <img
             src={product.image}
