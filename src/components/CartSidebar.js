@@ -43,6 +43,12 @@ const CartSidebar = ({ isOpen, onClose }) => {
       <ul className="cart-items">
         {cart.map((product) => (
           <li key={product.id} className="cart-item-card">
+            <button 
+        className="remove-button" 
+        onClick={() => removeFromCart(product.id)}
+      >
+        ✕
+      </button>
             <div className='cartimgdiv'>
             <img src={product.image} alt={product.cardname} className="cart-item-image" />
             </div>

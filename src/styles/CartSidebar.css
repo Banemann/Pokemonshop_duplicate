@@ -99,6 +99,20 @@
   height: auto;
 }
 
+.remove-button {
+  background: none;
+  border: none;
+  color: #E73B2F;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 0px;
+  height: 30px;
+  margin-left: 5px;
+}
+
 .cart-item-info {
   flex: 1;
   display: flex;
@@ -147,6 +161,7 @@
   font-weight: bold;
   margin: 0 0 5px;
   padding: 10px 0;
+  width: 240px;
 }
 
 .cartprice {
@@ -248,7 +263,7 @@
     padding: 20px 0;
     justify-content: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
   }
 
 
