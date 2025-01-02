@@ -43,9 +43,11 @@ const ShopSingle = () => {
   if (loading) return <p className="loading">Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
-  const indholdItems = product.indhold.split(',').map((item, index) => (
-    <li key={index}>{item.trim()}</li>
-  ));
+  const indholdItems = product.indhold
+    ? product.indhold.split(',').map((item, index) => (
+        <li key={index}>{item.trim()}</li>
+      ))
+    : <p>-</p>;
 
   return (
     <div className="product-detail-single">
@@ -74,7 +76,7 @@ const ShopSingle = () => {
           <p>{product.beskrivelse}</p>
         </div>
         <div className="product-contents-single">
-          <h2>Indholder</h2>
+          <h2>Indeholder</h2>
           <ul>{indholdItems}</ul>
         </div>
       </div>
