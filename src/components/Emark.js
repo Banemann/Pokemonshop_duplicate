@@ -4,10 +4,10 @@ import '../styles/Emark.css';
 function Emark() {
 
   return (
-    <Link to="https://certifikat.emaerket.dk/pokemonshop.dk" className="emark">
+    <Link to="https://certifikat.emaerket.dk/pokemonshop.dk" className="emark" target="_blank"
+    rel="noopener noreferrer">
       <img src="/emark.svg" alt="e-mærket"
-      target="_blank"
-      rel="noopener noreferrer" />
+      />
     </Link>
   );
 };
