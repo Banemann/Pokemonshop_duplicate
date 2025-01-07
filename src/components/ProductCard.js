@@ -65,9 +65,13 @@ const ProductCard = ({ product }) => {
 
           <div className="stock-indicator" tabIndex="0">
             <span
-              className={`stock-light ${product.lager > 0 ? 'green' : 'red'}`}
+              className={`stock-light ${
+                product.lager > 3 ? 'green' : product.lager > 0 ? 'yellow' : 'red'
+              }`}
             ></span>
-            <span className="cardstockspan">{product.lager > 0 ? 'På lager' : 'Udsolgt'}</span>
+            <span className="cardstockspan">
+              {product.lager > 0 ? (product.lager < 4 ? 'Få på lager' : 'På lager') : 'Udsolgt'}
+            </span>
           </div>
         </div>
       </Link>

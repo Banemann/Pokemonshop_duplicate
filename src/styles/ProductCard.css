@@ -121,6 +121,10 @@ color: #1f2d5c;
   background-color: green;
 }
 
+.stock-light.yellow {
+  background-color: yellow;
+}
+
 .stock-light.red {
   background-color: red;
 }
